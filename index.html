@@ -22,11 +22,10 @@
   } 
   .container{
     width: 100vw;
-    height: 800px;
+    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background: red;*/
   }
   .wrapper{
     display: flex;
@@ -34,50 +33,62 @@
     width: 100%;
     margin: 0 5rem 0 5rem;
     position: absolute;
-    /*background: yellow;*/
   }
   .left{
     background: rgb(28, 23, 56);
     color: #fff;
-    width: 300px;
-    height: 184px;
-    padding: 0 2rem 4rem 2rem;
+    width: 400px;
+    height: 384px;
+    padding: 0 1rem 4rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 5px 0 0 5px;
   }
   .left h1{
-    font-size: 30px;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin: -25% 10%;
+    margin-bottom: 0;
+    font-family: "Inter", sans-serif;
   }
   .left h1 span{
     color: #7209b7;
-    cursor: pointer;
   }
   .left p{
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 0.9rem;
+    line-height: 1.75;
     letter-spacing: 1px;
     opacity: 0.5;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    transition: 0.5s ease-in-out;
+    margin: 5% 10%;
+    font-family: "Lexend Deca", sans-serif;
   }
   .left .social{
     display: flex;
-
+    padding-bottom: 30px;
+    padding-left: 2.5rem;
+    display: flex;
     position: absolute;
     bottom: 0;
+  }
+  .social-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
   }
   .left .social .follow:hover p{
     opacity: 7;
   }
 
-.left .social .follow{
-  width: 80px;
-  overflow: hidden;
-  cursor: pointer;
-}
+  .left .social .follow{
+    width: 80px;
+    overflow: visible;
+    padding-top: 20px;
+    cursor: pointer;
+  }
   .left .social .follow:nth-child(2){
     margin-left: 20px;
   }
@@ -85,36 +96,25 @@
     margin-left: 20px;
   }
   .left .social .follow h1{
-    font-size: 20px;
+    font-size: 1.8rem;
+
   }
   .left .social .follow p{
     margin-top: -10px;
+    padding-top: 10px;
     font-size: 10px;
     text-transform: uppercase;
-    opacity: 0.5;
   }
   .right{
-    width: 300px;
-    height: 200px;
-    
-  }
-  .right img{
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+    max-width: 500px;
+    width: 50%;
+    background-color: rgb(114, 9, 183);
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
     border-radius: 0 5px 5px 0;
-    opacity: 0.6;
-    transition: all 0.5s ease-in-out;
   }
-  .right img:hover{
-    transform: scale(1.05);
-    border-radius: 0;
-    opacity: 1;
-  }
- 
 
   @media screen and (max-width: 768px){
   
@@ -124,93 +124,90 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      /*overflow: -moz-scrollbars-vertical;
-      overflow-x: hidden;
-      overflow-y: auto;*/
     }
     .container{
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      height: 900px;
     }
     .wrapper{
       display: flex;
       flex-direction: column;
       height: 500px;
-      width: 236px;
+      width: 400px;
       padding: 5rem 2rem 5rem 2rem;
-      position: absolute;
+      /*position: absolute;*/
     }
     .right{
       position: absolute;
       top: 0;
       left: 0;
-    }
-    .right img{
+      right: 0;
       width: 100%;
-      height: 250px;
-      object-fit: scale-down;
+      background-color: rgb(114, 9, 183);
+      background-image: url(images/image-header-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      height: 15.5rem;
       border-radius: 5px 5px 0 0;
     }
     .left{
       position: absolute;
       bottom: 0;
       left: 0;
-      height: calc(100% - 312px);
-      width: 236px;
+      right: 0;
+      top: 248px;
+      width: 433px;
       text-align: center;
       display: flex;
       align-items: center;
       border-radius: 0 0 5px 5px;
     }
     .left .text{
-      margin-top: -200px;
+      margin-top: 100px;
+      height: 200px;
     }
-    .left h1{
-      font-size: 25px;
-      margin-bottom: 20px;
+    .text h1{
+      font-size: 1.8rem;
+    }
+    .text p{
+      font-size: 0.8rem;
     }
     .social{
-      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    .social-wrapper{
       display: flex;
       flex-direction: column;
       align-items: center;
-      /*justify-content: center;*/
-      padding: 10px 0 10px 0;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-bottom: -40px;
     }
-
-    .left .social .follow{
-      margin-left: 10px;
+    .social-wrapper .follow{
+      padding-top: 50px;
+      /*margin-top: 20px;*/
     }
-    .follow:nth-child(2){
-      margin-left: -10px;
+    .social-wrapper .follow:nth-child(1){
+      margin-left: 18px;
     }
-    .follow:nth-child(3){
-      padding-left: -10px;
-    }
-    .follow h1{
-
-    }
-    .follow p{
-      margin-top: -5px;
-    }
-    .left .social .follow:nth-child(2){
+    .social-wrapper .follow:nth-child(2){
       margin-top: 20px;
     }
-    .left .social .follow:nth-child(3){
-      margin-top: 30px;
+    .social-wrapper .follow:nth-child(3){
+      margin-top: 20px;
     }
-    .follow p::before{
-      content: "";
+    .follow h1{
+      margin-bottom: -5px;
     }
-    .follow:nth-child(2) p::before{
-      content: "";
+    .follow p{
+      margin-top: 10px;
     }
-    .follow:nth-child(3) p::before{
-      content: "";
-    }
-    .attribution { font-size: 9px; text-align: center; background: #f9f9f9; }
+   
+   .attribution { font-size: 9px; text-align: center; background: #f9f9f9; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
   }
@@ -229,22 +226,24 @@
           <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
         </div>
         <div class="social">
-          <div class="follow">
-            <h1>10k+</h1>
-            <p>compagnies</p>
-          </div>
-          <div class="follow">
-            <h1>314</h1>
-            <p>templates</p>
-          </div>
-          <div class="follow">
-            <h1>12M+</h1>
-            <p>queries</p>
+          <div class="social-wrapper">
+            <div class="follow">
+              <h1>10k+</h1>
+              <p>companies</p>
+            </div>
+            <div class="follow">
+              <h1>314</h1>
+              <p>templates</p>
+            </div>
+            <div class="follow">
+              <h1>12M+</h1>
+              <p>queries</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="right">
-        <img src="images/image-header-desktop.jpg" alt=""> 
+        <!-- <img src="images/image-header-desktop.jpg" alt="">  -->
       </div>
     </div>
     
